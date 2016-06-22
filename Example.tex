@@ -1,0 +1,135 @@
+%% LyX 2.1.4 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[english]{beamer}
+\usepackage{lmodern}
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+\synctex=-1
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[authoryear]{natbib}
+
+\makeatletter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+ % this default might be overridden by plain title style
+ \newcommand\makebeamertitle{\frame{\maketitle}}%
+ % (ERT) argument for the TOC
+ \AtBeginDocument{%
+   \let\origtableofcontents=\tableofcontents
+   \def\tableofcontents{\@ifnextchar[{\origtableofcontents}{\gobbletableofcontents}}
+   \def\gobbletableofcontents#1{\origtableofcontents}
+ }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+\usepackage[french,english]{babel}
+\AtBeginDocument{%
+   \let\origtableofcontents=\tableofcontents
+   \def\tableofcontents{\@ifnextchar[{\origtableofcontents}{\gobbletableofcontents}}
+   \def\gobbletableofcontents#1{\origtableofcontents}
+ }%\hypersetup{pdfpagemode=FullScreen}
+\beamertemplatenavigationsymbolsempty
+\usetheme{mcgill}
+\DeclareGraphicsExtensions{.jpg,.eps,.png,.pdf,.mps,.gif,.svg}
+
+
+\usepackage{pgf}
+\usepackage{pgfarrows}\usepackage{pgfnodes}\usepackage{pgfautomata}\usepackage{pgfheaps}\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\usepackage{url}
+%\usepackage{multimedia}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% color definitions %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\definecolor{gris1}{RGB}{220,220,220}
+\definecolor{gris2}{RGB}{180,180,180}
+\definecolor{couleurtitreslide}{RGB}{220,220,220}
+\definecolor{couleurrouge}{RGB}{210,0,0}
+\definecolor{couleurtexteblock}{RGB}{145,5,5}
+\definecolor{couleurfond}{RGB}{255,255,255}
+
+
+\setbeamercovered{transparent=0}
+\usebackgroundtemplate{\includegraphics[width=160mm]{Isirbg}}
+\addtobeamertemplate{block begin}{\setlength{\abovedisplayskip}{0pt}}
+
+
+
+
+%\addto\extrasfrench{%
+%   \providecommand{\og}{\leavevmode\flqq~}%
+%   \providecommand{\fg}{\ifdim\lastskip>\z@\unskip\fi~\frqq}%
+%}
+
+\makeatother
+
+\usepackage{babel}
+\begin{document}
+
+\title[Template beamer ISIR]{Test avec un titre long}
+
+
+\author[Antoine WEILL]{Antoine~WEILL--DUFLOS}
+
+
+\date[2016]{22 Juin 2016}
+
+\makebeamertitle
+
+
+\section{Section 1}
+
+\subsection{Test1}
+\begin{frame}
+{Titre de Frame}
+
+ 
+\begin{exampleblock}{Bloc Exemple}
+ Lorem Ipsum \end{exampleblock}
+\begin{alertblock}{Bloc Alerte}
+Lorem Ipsum \end{alertblock}
+
+\begin{block}{Bloc}
+Lorem Ipsum
+\end{block}
+\end{frame}
+
+\section{Section 2}
+
+
+\subsection{Subsec 1}
+
+\begin{frame}{Lorem Ipsum}
+
+\begin{exampleblock}{Lorem Ipsum}
+Lorem Ipsum \end{exampleblock}
+\begin{columns}
+
+\column{3cm}
+\begin{block}{Lorem Ipsum}
+Lorem Ipsum
+\end{block}
+
+\column{3cm}
+\begin{block}<1>{Lorem Ipsum}
+Only First time
+\end{block}
+
+\column{3cm}
+\begin{block}<2->{Lorem Ipsum}
+From second time
+\end{block}
+\end{columns}
+
+\begin{block}<3->{Lorem Ipsum}
+From third time
+
+\end{block}
+\end{frame}
+
+\end{document}
